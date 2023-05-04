@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex {
+  display:flex;
+  flex-wrap:wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator__wrapper {
+  width:350px;
+  height:600px;
+  border-radius:50px;
+  background-color:#efefef;
+  margin:100px auto;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.calculator__result {
+  text-align:right;
+  font-size: 70px;
+  color:#F79A25;
+  overflow-x: auto;
+}
+
+.calculator__top-btns {
+  width:100%;
+  justify-content: space-between;
+}
+
+
+
+.calculator__buttons-wrapper {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  row-gap:15px;
+  width:100%;
+}
+
+.calculator__digits-wrapper {
+  width:73%;
+  row-gap:15px;
+  justify-content:space-between;
+}
+
+.calculator__modifiers-wrapper {
+  width:20%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border-radius:100px;
+  background-color:#e4e4e4;
+  color:#878787;
+  border:none;
+  width:61px;
+  height:61px;
+  font-size: 26px;
+  cursor:pointer;
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color:#cbcbcb;
+}
+
+button:active {
+  border:1px solid black;
+}
+
+.calculator__modifiers-wrapper button {
+  background-color:#F79A25;
+  color:white;
+}
+
+.delete-btn {
+ display:flex;
+ justify-content: center;
+ align-items:center;
+ background-color:#F79A25;
+ position:relative;
+ right:-2px;
+}
+
+.delete-btn:hover,
+.calculator__modifiers-wrapper button:hover {
+  background-color:#dd7b00;
+}
+
+.delete-btn img {
+  width:65%;
+}
+
+.division-btn {
+  font-size: 47px;
 }
